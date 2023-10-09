@@ -1,0 +1,133 @@
+====================================================================================================
+Selamat datang di toko elektronik 
+====================================================================================================
+1. admin
+2. customer
+3. keluar
+Pilih peran Anda (admin/customer): 1
+====================================================================================================
+Masukkan username admin: muhammad luqman
+Masukkan password admin: 2309116068
+====================================================================================================
+Login admin berhasil.
+====================================================================================================
+====================================================================================================
+
+=== Menu Admin ===
+1. Tambah Produk
+2. Edit Produk
+3. Hapus Produk
+4. Lihat Produk
+5. Keluar
+Pilih tindakan admin: 1
+====================================================================================================
+Masukkan ID Laptop: 016
+Masukkan Nama Laptop: acer nitro 5
+Masukkan Harga : 14399000
+Laptop 'acer nitro 5' dengan ID 016 telah ditambahkan ke daftar.
+====================================================================================================
+
+=== Menu Admin ===
+1. Tambah Produk
+2. Edit Produk
+3. Hapus Produk
+4. Lihat Produk
+5. Keluar
+Pilih tindakan admin: 2
+====================================================================================================
++-----------+------------------------+------------+
+| ID Laptop |      Nama Laptop       |   Harga    |
++-----------+------------------------+------------+
+|    001    |  NB Acer Aspire 3 R3   | 7.500.000  |
+|    002    |  NB Acer Aspire 3 R5   | 8.500.000  |
+|    003    |  NB Acer Aspire 3 i3   | 7.250.000  |
+|    004    | Acer Aspire3 Spin14 i3 | 8.700.000  |
+|    005    |      Aspire 5 i5       | 13.750.000 |
+|    006    |    Acer Aspire7 I5     | 11.000.000 |
+|    007    |   Aspire5 Spin14 i7    | 14.500.000 |
+|    008    |     Acer Spin3 i7      | 16.000.000 |
+|    009    |      Swift 14 i7       | 21.500.000 |
+|    010    |     Acer Swift3 i5     | 12.500.000 |
+|    011    |    Swift 3 Oled i5     | 13.500.000 |
+|    012    |     Swift 5 AEO i5     | 19.000.000 |
+|    013    |     Swift X ART R5     | 14.999.000 |
+|    014    | NB Acer Swift GO 14 R5 | 16.000.000 |
+|    015    |   Acer Swift X14 i7    | 25.000.000 |
+|    016    |      acer nitro 5      | 14399000.0 |
++-----------+------------------------+------------+
+Masukkan ID Laptop yang akan diubah: 001
+Pilih data yang akan diubah (Nama/Harga): harga
+Masukkan nilai baru untuk Harga: 7000000
+Data laptop dengan ID 001 berhasil diubah.
+====================================================================================================
+
+=== Menu Admin ===
+1. Tambah Produk
+2. Edit Produk
+3. Hapus Produk
+4. Lihat Produk
+5. Keluar
+Pilih tindakan admin: 3
+====================================================================================================
++-----------+------------------------+------------+
+| ID Laptop |      Nama Laptop       |   Harga    |
++-----------+------------------------+------------+
+|    001    |  NB Acer Aspire 3 R3   |  7000000   |
+|    002    |  NB Acer Aspire 3 R5   | 8.500.000  |
+|    003    |  NB Acer Aspire 3 i3   | 7.250.000  |
+|    004    | Acer Aspire3 Spin14 i3 | 8.700.000  |
+|    005    |      Aspire 5 i5       | 13.750.000 |
+|    006    |    Acer Aspire7 I5     | 11.000.000 |
+|    007    |   Aspire5 Spin14 i7    | 14.500.000 |
+|    008    |     Acer Spin3 i7      | 16.000.000 |
+|    009    |      Swift 14 i7       | 21.500.000 |
+|    010    |     Acer Swift3 i5     | 12.500.000 |
+|    011    |    Swift 3 Oled i5     | 13.500.000 |
+|    012    |     Swift 5 AEO i5     | 19.000.000 |
+|    013    |     Swift X ART R5     | 14.999.000 |
+|    014    | NB Acer Swift GO 14 R5 | 16.000.000 |
+|    015    |   Acer Swift X14 i7    | 25.000.000 |
+|    016    |      acer nitro 5      | 14399000.0 |
++-----------+------------------------+------------+
+Masukkan ID Laptop yang akan dihapus: 004
+Laptop dengan ID 004 telah dihapus.
+====================================================================================================
+
+=== Menu Admin ===
+1. Tambah Produk
+2. Edit Produk
+3. Hapus Produk
+4. Lihat Produk
+5. Keluar
+Pilih tindakan admin: 4
+====================================================================================================
++-----------+------------------------+------------+
+| ID Laptop |      Nama Laptop       |   Harga    |
++-----------+------------------------+------------+
+|    001    |  NB Acer Aspire 3 R3   |  7000000   |
+|    002    |  NB Acer Aspire 3 R5   | 8.500.000  |
+|    003    |  NB Acer Aspire 3 i3   | 7.250.000  |
+|    005    |      Aspire 5 i5       | 13.750.000 |
+|    006    |    Acer Aspire7 I5     | 11.000.000 |
+|    007    |   Aspire5 Spin14 i7    | 14.500.000 |
+|    008    |     Acer Spin3 i7      | 16.000.000 |
+|    009    |      Swift 14 i7       | 21.500.000 |
+|    010    |     Acer Swift3 i5     | 12.500.000 |
+|    011    |    Swift 3 Oled i5     | 13.500.000 |
+|    012    |     Swift 5 AEO i5     | 19.000.000 |
+|    013    |     Swift X ART R5     | 14.999.000 |
+|    014    | NB Acer Swift GO 14 R5 | 16.000.000 |
+|    015    |   Acer Swift X14 i7    | 25.000.000 |
+|    016    |      acer nitro 5      | 14399000.0 |
++-----------+------------------------+------------+
+====================================================================================================
+
+=== Menu Admin ===
+1. Tambah Produk
+2. Edit Produk
+3. Hapus Produk
+4. Lihat Produk
+5. Keluar
+Pilih tindakan admin: 5
+================================================================>    & C:/Users/Admin/AppData/Local/Programs/Python/Python311/python.exe "c:/Users/Admin/Documents/Semester 1/praktikum(DDP)/POSTEST(2)/postest2.py"ikum(DDP)\POSTEST(2)>
+
