@@ -1,0 +1,166 @@
+
+from prettytable import PrettyTable
+
+# Inisialisasi tabel untuk daftar laptop
+daftar_laptop = PrettyTable()
+daftar_laptop.field_names = ["ID Laptop", "Nama Laptop", "Harga"]
+
+# Fungsi untuk menambahkan laptop ke daftar
+def tambah_laptop(id_laptop, nama, harga):
+    daftar_laptop.add_row([id_laptop, nama, harga])
+# Menambahkan beberapa contoh laptop ke daftar
+tambah_laptop ("001", "NB Acer Aspire 3 R3", "7.500.000")
+tambah_laptop ("002", "NB Acer Aspire 3 R5", "8.500.000")
+tambah_laptop ("003", "NB Acer Aspire 3 i3", "7.250.000")
+tambah_laptop ("004", "Acer Aspire3 Spin14 i3", "8.700.000")
+tambah_laptop ("005", "Aspire 5 i5", "13.750.000")
+tambah_laptop ("006", "Acer Aspire7 I5", "11.000.000")
+tambah_laptop ("007", "Aspire5 Spin14 i7", "14.500.000")
+tambah_laptop ("008", "Acer Spin3 i7", "16.000.000")
+tambah_laptop ("009", "Swift 14 i7", "21.500.000")
+tambah_laptop ("010", "Acer Swift3 i5", "12.500.000")
+tambah_laptop ("011", "Swift 3 Oled i5", "13.500.000")
+tambah_laptop ("012", "Swift 5 AEO i5", "19.000.000")
+tambah_laptop ("013", "Swift X ART R5", "14.999.000")
+tambah_laptop ("014", "NB Acer Swift GO 14 R5", "16.000.000")
+tambah_laptop ("015", "Acer Swift X14 i7", "25.000.000")
+
+# Fungsi untuk menampilkan daftar laptop
+def tampilkan_daftar_laptop():
+    print(daftar_laptop)
+
+
+# Fungsi untuk mengubah data laptop
+def ubah_laptop():
+    tampilkan_daftar_laptop()
+    id_laptop = input("Masukkan ID Laptop yang akan diubah: ")
+    field = input("Pilih data yang akan diubah (Nama/Harga): ").capitalize()
+    nilai_baru = input(f"Masukkan nilai baru untuk {field}: ")
+    
+    for row in daftar_laptop._rows:
+        if row[0] == id_laptop:
+            index = daftar_laptop._rows.index(row)
+            if field == "Nama":
+                daftar_laptop._rows[index][1] = nilai_baru
+            elif field == "Harga":
+                daftar_laptop._rows[index][2] = str(nilai_baru)
+            else:
+                print("Data tidak valid.")
+                return
+    
+    print(f"Data laptop dengan ID {id_laptop} berhasil diubah.")
+
+# Fungsi untuk menghapus laptop
+def hapus_laptop():
+    tampilkan_daftar_laptop()
+    id_laptop = input("Masukkan ID Laptop yang akan dihapus: ")
+    
+    for row in daftar_laptop._rows:
+        if row[0] == id_laptop:
+            daftar_laptop.del_row(daftar_laptop._rows.index(row))
+            print(f"Laptop dengan ID {id_laptop} telah dihapus.")
+            return
+    
+    print(f"Laptop dengan ID {id_laptop} tidak ditemukan.")
+
+# Fungsi untuk menampilkan daftar laptop
+def tampilkan_daftar_laptop():
+    print(daftar_laptop)
+
+# Fungsi untuk membeli laptop
+def beli_laptop():
+    tampilkan_daftar_laptop()
+    id_laptop = input("Masukkan ID Laptop yang ingin Anda beli: ")
+    
+    for row in daftar_laptop._rows:
+        if row[0] == id_laptop:
+            print(f"Anda telah membeli laptop {row[1]} seharga {row[2]}.")
+            print("="*40)
+            daftar_laptop.del_row(daftar_laptop._rows.index(row))
+            return
+    
+    print("ID Laptop tidak valid atau laptop tidak tersedia.")
+
+def menu_admin():
+    username = input("Masukkan username admin: ")
+    password = input("Masukkan password admin: ")
+    print("="*100)
+    # Periksa apakah username dan password admin benar
+    if username == 'muhammad luqman' and password == '2309116068':
+        print("Login admin berhasil.")
+        print("="*100)
+    else:
+        print("Login admin gagal. Username atau password salah.")
+
+# Fungsi untuk login pembeli
+def menu_pembeli():
+    nama_pembeli = input("Masukkan nama Anda sebagai pembeli: ")
+    print("="*100)
+    print(f"Selamat datang, {nama_pembeli}!")
+    print("="*100)
+
+# Main program
+if __name__ == "__main__":
+ while True:
+    print("="*100)
+    print("Selamat datang di toko elektronik ")
+    print("="*100)
+    print("1. admin")
+    print("2. customer")
+    print("3. keluar")
+    peran = input("Pilih peran Anda (admin/customer): ")
+    print("="*100)
+
+    if peran == "1":
+        menu_admin()
+        while True:
+                print("="*100)
+                print("\n=== Menu Admin ===")
+                print("1. Tambah Produk")
+                print("2. Edit Produk")
+                print("3. Hapus Produk")
+                print("4. Lihat Produk")
+                print("5. Keluar")
+                menu_admin = input("Pilih tindakan admin: ")
+                print("="*100)
+
+                if menu_admin == "1":
+                    id_laptop = input("Masukkan ID Laptop: ")
+                    nama = input("Masukkan Nama Laptop: ")
+                    harga = float(input("Masukkan Harga : "))
+                    tambah_laptop(id_laptop, nama, harga)
+                    print(f"Laptop '{nama}' dengan ID {id_laptop} telah ditambahkan ke daftar.")
+                elif menu_admin == "2":
+                    ubah_laptop()
+                elif menu_admin == "3":
+                    hapus_laptop()
+                elif menu_admin == "4":
+                    tampilkan_daftar_laptop()
+                elif menu_admin == "5":
+                    break
+                else:
+                    print("Pilihan tidak valid.")
+    elif peran == "2":
+        menu_pembeli()
+        while True:
+            print("="*100)
+            print("\n toko electronik ")
+            print("1. Tampilkan Daftar Laptop")
+            print("2. Beli Laptop")
+            print("3. Keluar")
+            pilihan = input("Pilih tindakan: ")
+            print("="*100)
+
+            if pilihan == "1":
+                tampilkan_daftar_laptop()
+            elif pilihan == "2":
+                beli_laptop()
+            elif pilihan == "3":
+                print("Terima kasih telah menggunakan aplikasi toko.")
+                break
+ 
+    elif peran == "3":
+        print("Terima kasih telah menggunakan aplikasi toko.")
+    break
+else:
+    print("Peran tidak valid. Silakan pilih 'admin' atau 'pembeli'.")
